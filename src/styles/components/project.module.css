@@ -23,6 +23,11 @@
 .right img {
 	width: 100%;
 	object-fit: contain;
+	filter: drop-shadow(4px 4px 4px black);
+}
+
+.container:nth-child(even) .right img {
+	filter: drop-shadow(-4px 4px 4px black);
 }
 .title {
 	font-size: 2rem;

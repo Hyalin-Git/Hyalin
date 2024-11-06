@@ -1,7 +1,33 @@
+"use client";
 import styles from "@/styles/components/about.module.css";
 import Image from "next/image";
+import { useEffect, useRef } from "react";
 
 export default function About() {
+	const options = {
+		root: document.querySelector("#about"),
+		rootMargin: "0px",
+		threshold: 0.5,
+	};
+	const callback = (entries, observer) => {
+		entries.forEach((entry) => {
+			if (entry.isIntersecting) {
+				imageRef.current.classList.add(styles.drop);
+			} else {
+				imageRef.current.classList.remove(styles.drop);
+			}
+		});
+	};
+	const observer = new IntersectionObserver(callback, options);
+	const aboutRef = useRef("");
+	const imageRef = useRef("");
+
+	useEffect(() => {
+		observer.observe(aboutRef.current);
+		imageRef.current.addEventListener("animationend", () => {
+			imageRef.current.classList.add(styles.balance);
+		});
+	}, [observer, aboutRef]);
 	const list = [
 		"/html.svg",
 		"/css.svg",
@@ -19,7 +45,7 @@ export default function About() {
 		"/mongoDB.svg",
 	];
 	return (
-		<div className={styles.container} id="about">
+		<div className={styles.container} id="about" ref={aboutRef}>
 			<div className={styles.left}>
 				<div className={styles.card}>
 					<ul className={styles.list}>
@@ -32,7 +58,7 @@ export default function About() {
 						})}
 					</ul>
 					<p className={styles.bio}>
-						Nicolas, jeune développeur web de 23 ans, d'abord diplômé du BAC Pro
+						Nicolas, jeune développeur web de 24 ans, d'abord diplômé du BAC Pro
 						Commerce, je me suis finalement orienté vers le déveleppement web et
 						validé une formation d'état de niveau BAC +2. J'ai de suite été pris
 						de passion pour le développement web, j'adore la créativité et la
@@ -52,6 +78,7 @@ export default function About() {
 					alt="spidey"
 					width={600}
 					height={600}
+					ref={imageRef}
 				/>
 			</div>
 		</div>
