@@ -1,0 +1,47 @@
+.container {
+	display: flex;
+	justify-content: center;
+	gap: 120px;
+	width: 100%;
+}
+
+.container:nth-child(even) {
+	flex-direction: row-reverse;
+}
+
+.left {
+	max-width: 600px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 20px;
+}
+
+.right {
+	min-width: 300px;
+}
+.right img {
+	width: 100%;
+	object-fit: contain;
+}
+.title {
+	font-size: 2rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-shadow: -4px 4px 0px black;
+}
+
+.description {
+	font-weight: 400;
+}
+
+.description p::first-letter {
+	color: var(--secondary-color);
+	font-weight: bold;
+	font-size: 1.2rem;
+	text-shadow: -2px 2px 0 black;
+}
+
+.description {
+	text-shadow: 1px 1px 0px black;
+}

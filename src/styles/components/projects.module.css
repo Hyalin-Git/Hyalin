@@ -1,0 +1,24 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 40px;
+	scroll-margin-top: 80px;
+	padding: 60px 60px 60px 60px;
+	background: radial-gradient(var(--primary-color) -40%, #390102);
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.more button {
+	background-color: transparent;
+	border: none;
+	background-color: var(--secondary-color);
+	border-radius: 4px;
+	padding: 15px;
+	font-size: 1.5rem;
+}

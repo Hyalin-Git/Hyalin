@@ -1,0 +1,25 @@
+.container {
+	position: fixed;
+	z-index: 2001;
+	background-color: rgba(0, 0, 0, 0.404);
+	width: 100%;
+	padding: 30px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: 0.1rem;
+	transition: 150ms all linear;
+}
+
+.container[data-scroll="true"] {
+	background-color: white;
+	color: black;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+	transition: 150ms all linear;
+}
+
+.list {
+	display: flex;
+	justify-content: center;
+	gap: 200px;
+}

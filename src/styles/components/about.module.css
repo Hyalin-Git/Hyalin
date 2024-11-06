@@ -1,0 +1,60 @@
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	background: radial-gradient(var(--secondary-color) -20%, black);
+	scroll-margin-top: 80px;
+}
+
+.left {
+	width: 40%;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.card {
+	position: relative;
+	/* transform: skew(15deg); */
+	padding: 30px;
+	padding-top: 80px;
+	border: 2px solid white;
+	color: white;
+	transform: rotate(-1deg);
+}
+
+.list {
+	display: flex;
+	gap: 10px;
+	position: absolute;
+	top: -20;
+	right: -40;
+	padding: 20px;
+	background-color: white;
+	rotate: 1deg;
+}
+
+.left button {
+	border: 2px solid white;
+	background-color: transparent;
+	padding: 10px;
+	font-weight: bold;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+}
+
+.right img {
+	position: relative;
+	top: -800px;
+	animation: forwards anim 1s ease-out;
+}
+
+@keyframes anim {
+	from {
+		top: -800px;
+	}
+
+	to {
+		top: 0;
+	}
+}
