@@ -2,21 +2,27 @@
 	padding: 60px 60px 60px 60px;
 	background: radial-gradient(var(--secondary-color) -20%, black);
 	text-align: center;
+	scroll-margin-top: 60px;
 }
 
 .header {
 	margin-bottom: 60px;
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 	gap: 10px;
 }
 
 .header > .title {
+	/* font-size: clamp(1.2rem, 2.5vw, 2rem); */
 	font-size: 2rem;
 	font-weight: bold;
 }
 
 .header .description {
+	max-width: 850px;
+	font-size: 0.9rem;
+	color: rgba(255, 255, 255, 0.705);
 }
 
 .cards {
@@ -25,23 +31,172 @@
 	gap: 50px;
 }
 
-.cards > div {
+.card {
 	padding: 20px;
-}
-
-.wrapper .cards__title {
-	font-size: 1.5rem;
-	text-transform: uppercase;
-	font-weight: 600;
-}
-
-.wrapper {
 	height: 500px;
 	width: 300px;
 	border: 1px solid white;
-	box-shadow: 2px 5px 12px var(--third-color), -2px 0px 12px var(--third-color);
+	background-position: top right;
+	background-size: 100%;
+	background: linear-gradient(
+		200deg,
+		rgba(255, 255, 255, 0.404),
+		transparent 20%
+	);
+	cursor: pointer;
 }
 
-.wrapper:nth-child(2) {
-	scale: 1.05;
+.card:hover {
+	background-position: top right;
+	background-size: 200%;
+	animation: move-bg forwards 0.5s;
+}
+
+.card:not(:hover) {
+	animation: reverse-bg forwards 0.5s;
+}
+
+.card:nth-child(2) {
+	scale: 0.05;
+}
+
+.card:nth-child(2):hover {
+	animation: move-mid-bg forwards 0.5s;
+}
+
+.card:nth-child(2):not(:hover) {
+	animation: reverse-mid-bg forwards 0.5s;
+}
+
+.card .background {
+	position: relative;
+	z-index: 1;
+	opacity: 0.2;
+	filter: blur(2px);
+	transition: all 0.5s linear;
+}
+
+.card:hover .background {
+	opacity: 0.5;
+	filter: blur(0px);
+	transition: all 0.5s linear;
+}
+
+.card .card__content {
+	position: relative;
+	z-index: 2000;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+}
+
+.card .card__title {
+	font-size: 1.8rem;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.card:nth-child(1) .card__title {
+	text-shadow: -4px 4px 0px black;
+}
+
+.card:nth-child(2) .card__title {
+	text-shadow: -4px 4px 0px var(--secondary-color);
+}
+
+.card:nth-child(3) .card__title {
+	text-shadow: -4px 4px 0px var(--primary-color);
+}
+
+.card__description {
+	font-size: 0.8rem;
+}
+
+@keyframes move-bg {
+	from {
+		scale: 1;
+		box-shadow: 2px 5px 12px var(--third-color),
+			-2px 0px 12px var(--third-color);
+		background-position: top right;
+		background-size: 200%;
+
+		backface-visibility: hidden;
+	}
+	to {
+		scale: 1.01;
+		box-shadow: 4px 10px 12px var(--third-color),
+			-2px 0px 12px var(--third-color);
+		background-size: 1000%;
+
+		backface-visibility: hidden;
+	}
+}
+
+@keyframes move-mid-bg {
+	from {
+		scale: 1.05;
+		box-shadow: 2px 5px 12px var(--third-color),
+			-2px 0px 12px var(--third-color);
+		background-position: top right;
+		background-size: 200%;
+		backface-visibility: hidden;
+	}
+	to {
+		scale: 1.06;
+		box-shadow: 4px 10px 12px var(--third-color),
+			-2px 0px 12px var(--third-color);
+		background-size: 1000%;
+		backface-visibility: hidden;
+	}
+}
+
+@keyframes reverse-bg {
+	from {
+		box-shadow: 4px 10px 12px var(--third-color),
+			-2px 0px 12px var(--third-color);
+		scale: 1.01;
+		background-size: 1000%;
+		background-position: top right;
+		backface-visibility: hidden;
+	}
+	to {
+		box-shadow: 2px 5px 12px var(--third-color),
+			-2px 0px 12px var(--third-color);
+		background-position: top right;
+		background-size: 200%;
+		scale: 1;
+		backface-visibility: hidden;
+	}
+}
+
+@keyframes reverse-mid-bg {
+	from {
+		box-shadow: 4px 10px 12px var(--third-color),
+			-2px 0px 12px var(--third-color);
+		scale: 1.06;
+		background-size: 1000%;
+		background-position: top right;
+		backface-visibility: hidden;
+	}
+	to {
+		box-shadow: 2px 5px 12px var(--third-color),
+			-2px 0px 12px var(--third-color);
+		background-position: top right;
+		background-size: 200%;
+		scale: 1.05;
+		backface-visibility: hidden;
+	}
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1000px) {
+	.cards {
+		flex-wrap: wrap;
+	}
+
+	.card:nth-child(2) {
+		scale: 1;
+	}
 }
