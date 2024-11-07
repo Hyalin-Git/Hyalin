@@ -10,7 +10,7 @@
 	width: 40%;
 	display: flex;
 	flex-direction: column;
-	gap: 30px;
+	gap: 20px;
 }
 
 .card {
@@ -18,7 +18,8 @@
 	/* transform: skew(15deg); */
 	padding: 30px;
 	padding-top: 80px;
-	border: 2px solid white;
+	/* border: 1px solid white; */
+	background-color: var(--third-color);
 	color: white;
 	transform: rotate(-1deg);
 }
@@ -31,17 +32,35 @@
 	right: -40;
 	padding: 20px;
 	background-color: white;
+	box-shadow: -8px 8px 0px var(--primary-color);
 	rotate: 1deg;
 }
 
-.left button {
-	border: 2px solid white;
-	background-color: transparent;
-	padding: 10px;
+.button button {
+	position: relative;
+	left: 4px;
+	transform: rotate(-1deg);
+	background-color: var(--primary-color);
+	padding: 20px;
+	border: none;
 	font-weight: bold;
 	font-size: 1.5rem;
+	letter-spacing: 0.1rem;
 	text-transform: uppercase;
+	/* transform: skew(-15deg) skewY(1deg); */
 }
+
+/* .button::before {
+	position: absolute;
+	z-index: -1;
+	content: "";
+	width: 100%;
+	height: 100%;
+	background-color: var(--primary-color);
+	transform: skew(-15deg);
+	left: -10px;
+	bottom: 0;
+} */
 
 .right img {
 	position: relative;

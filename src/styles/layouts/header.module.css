@@ -14,12 +14,44 @@
 .container[data-scroll="true"] {
 	background-color: white;
 	color: black;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.705);
 	transition: 150ms all linear;
 }
 
-.list {
+.links {
 	display: flex;
 	justify-content: center;
 	gap: 200px;
+}
+
+.links li {
+	padding-inline: 10px;
+}
+
+.links li[data-active="true"] {
+	position: relative;
+}
+
+.links li[data-active="true"]::before {
+	position: absolute;
+	content: "";
+	background-color: white;
+	left: 0;
+	height: 5px;
+	bottom: -30px;
+	animation: activeAnim 0.2s forwards ease-in;
+}
+
+.container[data-scroll="true"] .links li[data-active="true"]::before {
+	background-color: black;
+	color: black;
+}
+
+@keyframes activeAnim {
+	from {
+		width: 0%;
+	}
+	to {
+		width: 100%;
+	}
 }

@@ -1,0 +1,47 @@
+.container {
+	padding: 60px 60px 60px 60px;
+	background: radial-gradient(var(--secondary-color) -20%, black);
+	text-align: center;
+}
+
+.header {
+	margin-bottom: 60px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.header > .title {
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+.header .description {
+}
+
+.cards {
+	display: flex;
+	justify-content: center;
+	gap: 50px;
+}
+
+.cards > div {
+	padding: 20px;
+}
+
+.wrapper .cards__title {
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+.wrapper {
+	height: 500px;
+	width: 300px;
+	border: 1px solid white;
+	box-shadow: 2px 5px 12px var(--third-color), -2px 0px 12px var(--third-color);
+}
+
+.wrapper:nth-child(2) {
+	scale: 1.05;
+}

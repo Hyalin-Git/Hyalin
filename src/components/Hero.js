@@ -1,9 +1,5 @@
 import styles from "@/styles/components/hero.module.css";
-import {
-	faCaretDown,
-	faChevronDown,
-	faLadderWater,
-} from "@fortawesome/free-solid-svg-icons";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 
@@ -34,6 +30,34 @@ export default function Hero() {
 			<div className={styles.down}>
 				<FontAwesomeIcon icon={faChevronDown} />
 				<FontAwesomeIcon icon={faChevronDown} />
+			</div>
+			<div className={styles.social}>
+				<ul>
+					<li>
+						<Image
+							src={"./twitter.svg"}
+							alt="Twitter-icon"
+							width={40}
+							height={40}
+						/>
+					</li>
+					<li>
+						<Image
+							src={"./linkedIn.svg"}
+							alt="LinkedIn-icon"
+							width={40}
+							height={40}
+						/>
+					</li>
+					<li>
+						<Image
+							src={"./github.svg"}
+							alt="GitHub-icon"
+							width={40}
+							height={40}
+						/>
+					</li>
+				</ul>
 			</div>
 		</div>
 	);

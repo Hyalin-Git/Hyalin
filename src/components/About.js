@@ -52,20 +52,22 @@ export default function About() {
 						{list?.map((elt, idx) => {
 							return (
 								<li key={idx}>
-									<Image src={elt} alt="icon" width={25} height={25} />
+									<Image src={elt} alt="icon" width={30} height={30} />
 								</li>
 							);
 						})}
 					</ul>
 					<p className={styles.bio}>
-						Nicolas, jeune développeur web de 24 ans, d'abord diplômé du BAC Pro
-						Commerce, je me suis finalement orienté vers le déveleppement web et
-						validé une formation d'état de niveau BAC +2. J'ai de suite été pris
-						de passion pour le développement web, j'adore la créativité et la
-						liberté que dégage cette profession. Aujourd'hui où j'en suis ? Je
-						continue d'apprendre par moi-même, de progresser en créant des
-						projets personnels afin de renforcer mes connaissances sur les
-						langages déjà maîtrisé et d'apprendre de nouveaux langages.
+						Le développeur web sympa du quartier, passionné depuis toujours par
+						l'informatique le développement web a été pour moi un véritable coup
+						de coeur d'abord diplômé du BAC Pro Commerce, je me suis finalement
+						orienté vers le déveleppement web et validé une formation d'état de
+						niveau BAC +2 qui m'a permis d'acquérir une solide base technique.
+						J'ai de suite été pris de passion pour le développement web, j'adore
+						la créativité et la liberté que dégage cette profession. Aujourd'hui
+						où j'en suis ? Je continue d'apprendre par moi-même, de progresser
+						en créant des projets personnels afin de renforcer mes connaissances
+						sur les langages déjà maîtrisé et d'apprendre de nouveaux langages.
 					</p>
 				</div>
 				<div className={styles.button}>

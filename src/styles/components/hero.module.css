@@ -44,21 +44,52 @@
 }
 
 .job {
-	background-color: var(--third-color);
+	background-color: black;
 	padding: 2px 0 6px 6px;
 	box-shadow: -4px 4px 0px var(--secondary-color);
 }
 
 .job h1 {
+	position: relative;
 	text-shadow: -3px 3px 0 var(--primary-color);
 	letter-spacing: 1rem;
 	text-transform: uppercase;
 	font-weight: 300;
 }
 
+.job h1::before,
+.job h1::after {
+	position: absolute;
+	content: "Développeur web full-stack";
+	top: 0;
+	left: 0;
+	padding: 6px 0;
+	width: 100%;
+}
+
+.job h1::before {
+	left: -3px;
+	top: -3px;
+	text-shadow: 3px 0 var(--primary-color);
+	-webkit-text-stroke-width: 1px;
+	/* color: transparent; */
+	-webkit-text-stroke-color: var(--secondary-color);
+	animation: glitchEffect 1s infinite linear alternate-reverse;
+}
+
+.job h1::after {
+	left: 4px;
+	top: -4px;
+	text-shadow: -2px 0 white;
+	-webkit-text-stroke-width: 1px;
+	/* color: transparent; */
+	-webkit-text-stroke-color: var(--primary-color);
+	animation: glitchEffect 1s infinite linear alternate-reverse;
+}
+
 .down {
 	position: absolute;
-	bottom: 35px;
+	bottom: 40px;
 	display: flex;
 	flex-direction: column;
 }
@@ -68,4 +99,75 @@
 	height: 20px;
 	transform: scale(1.5, 1);
 	color: white;
+}
+
+.social {
+	position: absolute;
+	left: 20px;
+	bottom: 20px;
+}
+.social ul {
+	display: flex;
+	gap: 20px;
+}
+
+.social img {
+	filter: invert(1) drop-shadow(-4px 4px 0px var(--primary-color));
+}
+
+@keyframes glitchEffect {
+	0% {
+		clip-path: polygon(0% 0%, 100% 0%, 100% -0.5%, 0% -0.5%);
+	}
+	5.88235% {
+		clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+	}
+	11.76471% {
+		clip-path: polygon(0% 0%, 100% 0%, 100% -0.5%, 0% -0.5%);
+	}
+	17.64706% {
+		clip-path: polygon(0% 0%, 100% 0%, 100% -0.5%, 0% -0.5%);
+	}
+	23.52941% {
+		clip-path: polygon(0% 16.666%, 100% 16.666%, 100% 0%, 0% 0%, 0% 100%);
+	}
+	29.41176% {
+		clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%);
+	}
+	35.29412% {
+		clip-path: polygon(0% 16.666%, 100% 16.666%, 100% 0%, 0% 0%, 0% 100%);
+	}
+	41.17647% {
+		clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%);
+	}
+	47.05882% {
+		clip-path: polygon(0% 16.666%, 100% 16.666%, 100% 0%, 0% 0%, 0% 100%);
+	}
+	52.94118% {
+		clip-path: polygon(0% 0%, 100% 0%, 100% -0.5%, 0% -0.5%);
+	}
+	58.82353% {
+		clip-path: polygon(0% 16.666%, 66.666% 16.666%, 66.666% 0%, 0% 0%, 0% 100%);
+	}
+	64.70588% {
+		clip-path: polygon(0% 0%, 66.666% 0%, 66.666% 0%, 0% 0%, 0% 100%);
+	}
+	70.58824% {
+		clip-path: polygon(0% 16.666%, 66.666% 16.666%, 66.666% 0%, 0% 0%, 0% 100%);
+	}
+	76.47059% {
+		clip-path: polygon(0% 0%, 66.666% 0%, 66.666% 0%, 0% 0%, 0% 100%);
+	}
+	82.35294% {
+		clip-path: polygon(0% 0%, 66.666% 0%, 66.666% 0%, 0% 0%, 0% 100%);
+	}
+	88.23529% {
+		clip-path: polygon(0% 0%, 66.666% 0%, 66.666% 0%, 0% 0%, 0% 100%);
+	}
+	94.11765% {
+		clip-path: polygon(0% 0%, 66.666% 0%, 66.666% 0%, 0% 0%, 0% 100%);
+	}
+	100% {
+		clip-path: polygon(0% 0%, 66.666% 0%, 66.666% 0%, 0% 0%, 0% 100%);
+	}
 }
