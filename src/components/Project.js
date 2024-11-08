@@ -7,10 +7,11 @@ export default function Project({ project }) {
 	return (
 		<InView threshold={1} triggerOnce>
 			{({ inView, ref, entry }) => (
-				<div className={styles.container} ref={ref}>
+				<div className={styles.container} ref={ref} data-inview={inView}>
 					<div className={styles.left}>
 						<div className={styles.title}>
-							<span>{project?.title + " " + project?.name}</span>
+							<span>{project?.title}</span>{" "}
+							<span className={styles.name}>{project?.name}</span>
 						</div>
 						<div className={styles.description}>
 							<p>{project?.description}</p>

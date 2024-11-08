@@ -4,11 +4,12 @@
 	align-items: center;
 	gap: 40px;
 	scroll-margin-top: 80px;
-	padding: 60px;
+	padding-bottom: 60px;
 	background: radial-gradient(var(--primary-color) -40%, #390102);
 }
 
 .wrapper {
+	margin-top: 60px;
 	display: flex;
 	flex-direction: column;
 	gap: 20px;

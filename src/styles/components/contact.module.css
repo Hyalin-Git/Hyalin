@@ -1,18 +1,82 @@
 .container {
-	padding: 60px;
 	background: radial-gradient(var(--primary-color) -40%, #390102);
+	padding-bottom: 60px;
 }
 
-.titles {
-	max-width: 500px;
+.wrapper {
+	margin-top: 60px;
+	display: flex;
+	justify-content: space-around;
 }
 
-.titles h2 {
-	font-size: 3rem;
-	margin-bottom: 10px;
+.right .title {
+	position: relative;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	margin-bottom: 30px;
+	font-weight: bold;
+	max-width: fit-content;
+	margin-inline: auto;
+	text-shadow: -2px 2px 0 var(--secondary-color);
 }
 
-.titles h3 {
+.right .title::before {
+	position: absolute;
+	content: "";
+	left: 0;
+	bottom: -10px;
+	background-color: white;
+	width: 100%;
+	height: 2px;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.form__names {
+	display: flex;
+	gap: 5px;
+	width: 700px;
+}
+
+.form__names input,
+.form__text textarea {
+	background-color: transparent;
+	border: 1px solid white;
+	outline: none;
+	padding: 8px;
+	width: 100%;
+	transition: 150ms all linear;
+}
+
+.form__names input:focus,
+.form__text textarea:focus {
+	border: 1px solid var(--secondary-color);
+	transition: 150ms all linear;
+}
+
+.form__names input::placeholder,
+.form__text textarea::placeholder {
+	color: white;
+	letter-spacing: 0.05rem;
+}
+
+.form__text textarea {
+	height: 200px;
+}
+
+.form__button button {
+	width: 100%;
+	padding: 8px;
+	background-color: white;
+	border: none;
 	font-size: 1rem;
-	font-weight: 400;
+	color: black;
+	font-weight: bold;
+}
+
+.phone {
 }

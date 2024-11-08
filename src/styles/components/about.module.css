@@ -1,9 +1,13 @@
 .container {
+	background: radial-gradient(var(--secondary-color) -20%, black);
+	scroll-margin-top: 60px;
+	padding-bottom: 60px;
+}
+
+.wrapper {
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
-	background: radial-gradient(var(--secondary-color) -20%, black);
-	scroll-margin-top: 80px;
 }
 
 .left {
@@ -16,13 +20,25 @@
 .card {
 	position: relative;
 	/* transform: skew(15deg); */
+	text-align: left;
 	padding: 30px;
 	padding-top: 80px;
-	/* border: 1px solid white; */
-	background-color: var(--third-color);
+	background-color: black;
+	border: 2px solid white;
 	color: white;
 	transform: rotate(-1deg);
 }
+
+/* .card::before {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	left: -8px;
+	bottom: -8px;
+	border-left: 2px solid var(--primary-color);
+	border-bottom: 2px solid var(--primary-color);
+} */
 
 .list {
 	display: flex;
@@ -31,36 +47,48 @@
 	top: -20;
 	right: -40;
 	padding: 20px;
-	background-color: white;
+	background-color: black;
 	box-shadow: -8px 8px 0px var(--primary-color);
 	rotate: 1deg;
 }
 
+.list img {
+	filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(69deg)
+		brightness(104%) contrast(103%);
+}
+
+.button {
+	padding-left: 5px;
+}
+
 .button button {
 	position: relative;
-	left: 4px;
 	transform: rotate(-1deg);
-	background-color: var(--primary-color);
-	padding: 20px;
+	background-color: transparent;
 	border: none;
 	font-weight: bold;
 	font-size: 1.5rem;
 	letter-spacing: 0.1rem;
+	text-shadow: -2px 2px 0 var(--primary-color);
 	text-transform: uppercase;
-	/* transform: skew(-15deg) skewY(1deg); */
 }
 
-/* .button::before {
+.button button::before {
 	position: absolute;
-	z-index: -1;
+	left: 0;
+	bottom: -5px;
 	content: "";
 	width: 100%;
-	height: 100%;
-	background-color: var(--primary-color);
-	transform: skew(-15deg);
-	left: -10px;
-	bottom: 0;
-} */
+	opacity: 0;
+	height: 2px;
+	background-color: white;
+	box-shadow: 4px 4px 0px var(--primary-color);
+	transition: 80ms all linear;
+}
+.button button:hover::before {
+	opacity: 1;
+	transition: 80ms all linear;
+}
 
 .right img {
 	position: relative;

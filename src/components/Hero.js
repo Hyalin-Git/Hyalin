@@ -1,11 +1,25 @@
+"use client";
 import styles from "@/styles/components/hero.module.css";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
 
-export default function Hero() {
+export default function Hero({ setLink }) {
+	const { ref, inView, entry } = useInView({
+		/* Optional options */
+		threshold: 0.5,
+	});
+
+	useEffect(() => {
+		if (inView) {
+			setLink("hero");
+		}
+	}, [inView]);
+
 	return (
-		<div className={styles.container}>
+		<div className={styles.container} ref={ref} id="hero">
 			<Image
 				className={styles.background}
 				src={"/images/hero-banner.png"}

@@ -1,22 +1,30 @@
+"use client";
 import styles from "@/styles/components/services.module.css";
 import Image from "next/image";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
+import SectionHeader from "@/layouts/SectionHeader";
 
-export default function Services() {
-	return (
-		<div className={styles.container} id="services">
-			<div className={styles.header}>
-				<div className={styles.title}>
-					<h2>Une solution pour tous</h2>
-				</div>
-				<div className={styles.description}>
-					<p>
-						En tant que développeur full-stack, je prends en charge chaque étape
+export default function Services({ setLink }) {
+	const { ref, inView, entry } = useInView({
+		threshold: 0.5,
+	});
+
+	useEffect(() => {
+		if (inView) {
+			setLink("services");
+		}
+	}, [inView]);
+
+	const subtitle = `En tant que développeur full-stack, je prends en charge chaque étape
 						de votre projet, de la conception au développement de l'interface
 						utilisateur à la gestion des bases de données et à la mise en ligne
-						de l’application.
-					</p>
-				</div>
-			</div>
+						de l’application.`;
+
+	return (
+		<section className={styles.container} id="services" ref={ref}>
+			<SectionHeader title={"Une solution pour tous"} subtitle={subtitle} />
+
 			<div className={styles.cards}>
 				<div className={styles.card}>
 					<Image
@@ -79,6 +87,6 @@ export default function Services() {
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 }

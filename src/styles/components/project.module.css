@@ -25,6 +25,27 @@
 	max-width: 450px;
 }
 
+.name {
+	position: relative;
+}
+
+.name::before {
+	position: absolute;
+	content: "";
+	left: 0px;
+	bottom: -5px;
+	background-color: var(--secondary-color);
+	width: 100%;
+	height: 2px;
+	transition: 250ms all linear;
+}
+
+/* .container[data-inview="true"] .name::before,
+.container[data-inview="true"]:nth-child(even) .name::before {
+	width: 100%;
+	transition: 250ms all linear;
+} */
+
 .description {
 	font-weight: 400;
 }
