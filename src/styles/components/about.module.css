@@ -1,60 +1,93 @@
 .container {
 	background: radial-gradient(var(--secondary-color) -20%, black);
 	scroll-margin-top: 60px;
-	padding-bottom: 60px;
 }
 
 .wrapper {
 	display: flex;
-	align-items: center;
 	justify-content: space-around;
 }
 
 .left {
 	width: 40%;
-	display: flex;
-	flex-direction: column;
-	gap: 20px;
+	scale: 0.7;
+	margin-top: -100px;
+	margin-bottom: -100px;
 }
 
 .card {
-	position: relative;
-	/* transform: skew(15deg); */
-	text-align: left;
-	padding: 30px;
-	padding-top: 80px;
-	background-color: black;
-	border: 2px solid white;
-	color: white;
-	transform: rotate(-1deg);
-}
-
-/* .card::before {
-	position: absolute;
-	content: "";
-	width: 100%;
-	height: 100%;
-	left: -8px;
-	bottom: -8px;
-	border-left: 2px solid var(--primary-color);
-	border-bottom: 2px solid var(--primary-color);
-} */
-
-.list {
+	background-color: white;
+	box-shadow: 4px 4px 8px black;
+	color: black;
+	padding: 16px;
 	display: flex;
-	gap: 10px;
-	position: absolute;
-	top: -20;
-	right: -40;
-	padding: 20px;
-	background-color: black;
-	box-shadow: -8px 8px 0px var(--primary-color);
-	rotate: 1deg;
+	flex-direction: column;
+	gap: 5px;
+	rotate: -2deg;
 }
 
-.list img {
-	filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(69deg)
-		brightness(104%) contrast(103%);
+.pages {
+	display: flex;
+
+	justify-content: space-between;
+	gap: 10px;
+}
+.page {
+	border: 1px solid black;
+	width: 100%;
+}
+
+.page__title {
+	padding: 2px;
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+.page__title span:nth-child(1) {
+	margin-bottom: -2px;
+}
+.page__title span {
+	display: block;
+}
+
+.page__number {
+	background-color: black;
+	color: white;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 1.3rem;
+}
+
+.text {
+	font-size: 0.6em;
+	font-weight: bold;
+}
+
+.title {
+	font-size: 14rem;
+	width: 100%;
+	letter-spacing: 0.15rem;
+	line-height: 13rem;
+}
+
+.article__content {
+	display: flex;
+}
+
+.content__left {
+	width: 50%;
+	/* padding-right: 120px;
+	align-self: center; */
+}
+
+.left__description {
+	font-weight: 500;
+}
+
+.content__right {
+	width: 50%;
+	height: 540px;
+	overflow: hidden;
 }
 
 .button {

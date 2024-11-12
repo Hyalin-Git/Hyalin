@@ -7,27 +7,55 @@
 	margin-top: 60px;
 	display: flex;
 	justify-content: space-around;
+	padding-inline: 60px;
 }
 
-.right .title {
+.left {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.title {
 	position: relative;
 	font-size: 1.5rem;
 	text-transform: uppercase;
 	margin-bottom: 30px;
 	font-weight: bold;
 	max-width: fit-content;
-	margin-inline: auto;
 	text-shadow: -2px 2px 0 var(--secondary-color);
 }
 
-.right .title::before {
+.right .title {
+	margin-inline: auto;
+}
+
+.title::before {
 	position: absolute;
 	content: "";
 	left: 0;
 	bottom: -10px;
 	background-color: white;
+	box-shadow: 0px 2px 4px black;
 	width: 100%;
 	height: 2px;
+}
+
+.number svg {
+	width: 30px;
+	height: 30px;
+}
+
+.number span {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.social ul {
+	display: flex;
+	gap: 10px;
+	filter: invert(1);
 }
 
 .form {
@@ -42,8 +70,8 @@
 	width: 700px;
 }
 
-.form__names input,
-.form__text textarea {
+.form input,
+.form textarea {
 	background-color: transparent;
 	border: 1px solid white;
 	outline: none;
@@ -52,19 +80,19 @@
 	transition: 150ms all linear;
 }
 
-.form__names input:focus,
-.form__text textarea:focus {
+.form input:focus,
+.form textarea:focus {
 	border: 1px solid var(--secondary-color);
 	transition: 150ms all linear;
 }
 
-.form__names input::placeholder,
-.form__text textarea::placeholder {
+.form input::placeholder,
+.form textarea::placeholder {
 	color: white;
 	letter-spacing: 0.05rem;
 }
 
-.form__text textarea {
+.form textarea {
 	height: 200px;
 }
 

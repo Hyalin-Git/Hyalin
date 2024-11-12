@@ -18,8 +18,7 @@
 	font-weight: bolder;
 	letter-spacing: -7px;
 	background-color: var(--primary-color);
-
-	padding: 2px 10px 4px 0;
+	padding: 2px 9px 4px 0;
 }
 
 .header span {
@@ -41,6 +40,7 @@
 	font-weight: bold;
 	text-shadow: -2px 10px 0 var(--primary-color);
 	letter-spacing: 1rem;
+	/* font-size: clamp(0.5rem, 2.5vw, 8rem); */
 }
 
 .job {
@@ -55,6 +55,7 @@
 	letter-spacing: 1rem;
 	text-transform: uppercase;
 	font-weight: 300;
+	font-size: clamp(0.5rem, 2.5vw, 2rem);
 }
 
 .job h1::before,

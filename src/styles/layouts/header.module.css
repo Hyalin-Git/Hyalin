@@ -20,12 +20,12 @@
 
 .links {
 	display: flex;
-	justify-content: center;
-	gap: 200px;
+	justify-content: space-around;
 }
 
 .links li {
 	padding-inline: 10px;
+	cursor: pointer;
 }
 
 .links li[data-active="true"] {
