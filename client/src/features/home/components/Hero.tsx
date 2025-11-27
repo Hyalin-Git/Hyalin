@@ -16,7 +16,7 @@ export default function Hero() {
           Spécialisé en React.js, Next.js & E-commerce
         </h2>
 
-        <p className="text-xl text-zinc-100/82">
+        <p className="text-xl text-zinc-100/80">
           Création d&apos;applications web modernes et boutiques en ligne
         </p>
 
