@@ -5,7 +5,7 @@ const FAQ = [
     id: 1,
     question: "Quels services proposez-vous ?",
     answer:
-      "Je propose une gamme complète de services de développement web, y compris la conception de sites web, le développement front-end et back-end, l'optimisation SEO, et la maintenance continue.",
+      "Oui, je propose plusieurs formules de maintenance : corrections de bugs pendant 30 jours inclus, puis contrats de maintenance mensuelle sur mesure. Cela inclut les mises à jour de sécurité, les optimisations de performance, l'ajout de nouvelles fonctionnalités et le support technique. Je reste disponible pour faire évoluer votre projet sur le long terme.",
   },
   {
     id: 1,
