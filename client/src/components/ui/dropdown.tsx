@@ -1,6 +1,7 @@
 "use client";
 import { ChevronDown, CircleQuestionMark } from "lucide-react";
 import { useState } from "react";
+import Corner from "./corner";
 
 export default function Dropdown({
   title,
@@ -11,7 +12,12 @@ export default function Dropdown({
 }) {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
-    <div className="group border bg-zinc-900/50 border-green-500/40 max-w-4xl mx-auto">
+    <div className="group relative border bg-zinc-900/70 border-green-500/30 max-w-4xl mx-auto hover:border-green-500/50 transition-colors ease">
+      {/* Appear when hovered */}
+      <Corner position="top-left" />
+      <Corner position="top-right" />
+      <Corner position="bottom-left" />
+      <Corner position="bottom-right" />
       <div
         className="flex p-6 cursor-pointer"
         onClick={() => setIsOpen(!isOpen)}

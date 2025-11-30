@@ -31,9 +31,9 @@ export default function Hero() {
         </div>
 
         <div className="flex flex-wrap justify-between max-w-sm mx-auto my-20 gap-4">
-          <Stat icon={<Zap />} stat="4+ ans" text="D'expérience" />
-          <Stat icon={<Code />} stat="50+" text="Projets réalisés" />
-          <Stat icon={<Radiation />} stat="15+" text="Technologies" />
+          <Stat icon={<Zap />} stat={4} text="D'expérience" />
+          <Stat icon={<Code />} stat={50} text="Projets réalisés" />
+          <Stat icon={<Radiation />} stat={15} text="Technologies" />
         </div>
 
         <div className="flex justify-center animate-bounce mt-16">

@@ -25,6 +25,8 @@ body {
     transition: max-height 0.3s ease;
   }
 
+
+
   @keyframes fadeIn {
     from {
       height: 0;
