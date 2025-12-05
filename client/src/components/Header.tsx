@@ -60,7 +60,7 @@ export default function Header() {
       }`}
     >
       <nav
-        className={`container px-0 lg:px-20 mx-auto py-4 flex items-center justify-between `}
+        className={`container mx-auto py-4 flex items-center justify-between `}
       >
         <div className="flex items-center gap-1">
           <Image

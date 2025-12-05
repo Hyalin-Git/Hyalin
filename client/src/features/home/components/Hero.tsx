@@ -11,12 +11,14 @@ export default function Hero() {
 
       {/* Contenu principal */}
       <div className="relative z-10">
-        <h1 className="text-8xl leading-tight">Développeur React</h1>
-        <h2 className="text-3xl mb-8">
+        <h1 className="text-6xl md:text-8xl leading-tight">
+          Développeur React
+        </h1>
+        <span className="block text-3xl mb-8 text-zinc-300">
           Spécialisé en React.js, Next.js & E-commerce
-        </h2>
+        </span>
 
-        <p className="text-xl text-zinc-100/80">
+        <p className="text-xl text-zinc-300">
           Création d&apos;applications web modernes et boutiques en ligne
         </p>
 

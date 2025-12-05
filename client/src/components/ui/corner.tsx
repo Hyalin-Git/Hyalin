@@ -12,7 +12,7 @@ export default function Corner({
 
   return (
     <div
-      className={`absolute w-3 h-3 border-transparent group-hover:border-green-500/50 transition-colors ease ${positions[position]}`}
+      className={`absolute z-10 w-3 h-3 border-transparent group-hover:border-green-500/50 transition-colors ease ${positions[position]}`}
     ></div>
   );
 }

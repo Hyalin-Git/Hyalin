@@ -2,6 +2,8 @@
 import { ChevronDown, CircleQuestionMark } from "lucide-react";
 import { useState } from "react";
 import Corner from "./corner";
+import LinearUnderline from "./linear-underline";
+import IconBloc from "./icon-bloc";
 
 export default function Dropdown({
   title,
@@ -23,20 +25,20 @@ export default function Dropdown({
         onClick={() => setIsOpen(!isOpen)}
       >
         <div className="flex items-center space-x-4">
-          <div className="w-11 h-11 flex items-center justify-center bg-green-500/5 border border-green-500/50 group-hover:bg-green-500/10 transition-colors ease">
-            <CircleQuestionMark className="text-green-400" size={22} />
-          </div>
+          <IconBloc className="w-11 h-11 group-hover:bg-green-500/10 transition-colors ease">
+            <CircleQuestionMark className="text-green-500" size={22} />
+          </IconBloc>
           <h4 className="text-lg text-white group-hover:text-green-400 transition-colors ease">
             {title}
           </h4>
         </div>
-        <div
-          className={`ml-auto w-8 h-8 flex items-center justify-center bg-green-500/10 border border-green-500/50 ${
+        <IconBloc
+          className={`ml-auto w-8 h-8 ${
             isOpen ? "rotate-180" : ""
           } transition-transform ease duration-150`}
         >
-          <ChevronDown className="text-green-400" size={20} />
-        </div>
+          <ChevronDown size={20} className="text-green-500" />
+        </IconBloc>
       </div>
 
       <div
@@ -49,10 +51,8 @@ export default function Dropdown({
             isOpen ? "opacity-100" : "opacity-0"
           } transition-opacity ease-in duration-150`}
         >
-          <div className="w-full h-px bg-linear-to-r from-green-500/80  to-transparent to-95%"></div>
-          <p className="text-zinc-100/80 text-left text-sm leading-6 py-4 ">
-            {content}
-          </p>
+          <LinearUnderline />
+          <p className="text-left text-sm leading-6 py-4 ">{content}</p>
         </div>
       </div>
     </div>

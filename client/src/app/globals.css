@@ -6,13 +6,24 @@
 
 }
 
-@theme inline {
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1100px;
+  --breakpoint-2xl: 1180px;
 }
 
+@layer base {
+  p {
+    @apply text-zinc-400;
+  }
+}
 
 body {
   background: var(--background);
@@ -25,8 +36,6 @@ body {
     transition: max-height 0.3s ease;
   }
 
-
-
   @keyframes fadeIn {
     from {
       height: 0;
@@ -37,4 +46,8 @@ body {
       opacity: 1;
     }
   }
+}
+
+@utility container {
+  @apply w-full mx-auto px-4;
 }

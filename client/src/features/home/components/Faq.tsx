@@ -50,9 +50,7 @@ export default function Faq() {
         <div className="mb-14">
           <h3 className="text-5xl">Questions Fréquentes</h3>
           <div className="mx-auto my-5 h-px w-24 bg-linear-to-r from-transparent via-green-500 to-transparent"></div>
-          <p className="text-zinc-100/80">
-            Tout ce que vous devez savoir sur mes services
-          </p>
+          <p>Tout ce que vous devez savoir sur mes services</p>
         </div>
 
         <div className="mt-4 space-y-4 mb-14">
