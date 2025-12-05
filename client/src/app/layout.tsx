@@ -3,12 +3,18 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import MouseSpotlight from "@/components/MouseSpotlight";
-import { Roboto } from "next/font/google";
+import { Roboto, Roboto_Mono } from "next/font/google";
 import Footer from "@/components/Footer";
 
 const roboto = Roboto({
   subsets: ["latin"],
   weight: ["400", "700"],
+});
+
+const robotoMono = Roboto_Mono({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-mono",
 });
 
 export const metadata: Metadata = {
@@ -23,7 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body className={`${roboto.className}`}>
+      <body className={`${roboto.className} ${robotoMono.variable}`}>
         <div className="relative bg-zinc-950 text-zinc-100 overflow-hidde">
           {/* Mouse spotlight effect */}
           <MouseSpotlight />

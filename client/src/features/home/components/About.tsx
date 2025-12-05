@@ -1,7 +1,32 @@
 import Card from "@/components/ui/card";
+import Corner from "@/components/ui/corner";
 import IconBloc from "@/components/ui/icon-bloc";
 import LinearUnderline from "@/components/ui/linear-underline";
+import Square from "@/components/ui/square";
 import { Award, Briefcase, Code2 } from "lucide-react";
+
+const expertises = [
+  {
+    id: 1,
+    title: "Application web",
+    description: "SaaS · Dashboards · Plateformes",
+  },
+  {
+    id: 4,
+    title: "E-commerce",
+    description: "Medusa.js · Solutions Headless",
+  },
+  {
+    id: 2,
+    title: "Sites vitrines",
+    description: "Corporate · Portfolios · Landing Pages",
+  },
+  {
+    id: 3,
+    title: "CMS Headless",
+    description: "WordPress · Payload · Node.js",
+  },
+];
 
 export default function About() {
   return (
@@ -54,19 +79,41 @@ export default function About() {
             </ul>
           </div>
         </div>
-        <Card>
-          <span className="text-xs text-green-500 uppercase tracking-widest">
-            Domaines d&apos;expertise
-          </span>
+        <div className="relative z-0">
+          <Card className="group relative z-10 border border-green-500/30 bg-zinc-900/50 p-8 backdrop-blur-sm">
+            <Corner position="top-left" />
+            <Corner position="bottom-right" />
+            <span className="text-xs text-green-500 uppercase tracking-widest font-mono">
+              Domaines d&apos;expertise
+            </span>
 
-          <ul>
-            <li className="mt-4 text-lg text-zinc-300">• Applications web</li>
-            <li className="mt-2 text-lg text-zinc-300">• E-commerce</li>
-            <li className="mt-2 text-lg text-zinc-300">• Dashboards</li>
-            <li className="mt-2 text-lg text-zinc-300">• PWA</li>
-            <li className="mt-2 text-lg text-zinc-300">• Intégrations API</li>
-          </ul>
-        </Card>
+            <div className="mt-4 text-lg text-zinc-300">
+              {expertises.map((exp) => {
+                return (
+                  <div
+                    key={exp?.id}
+                    className="group/item flex py-4 border-b-green-500/10 border-b hover:border-b-green-500/30 transition-colors"
+                  >
+                    <span className="text-green-500 font-mono text-xs mt-1 opacity-50 group-hover/item:opacity-100 transition-opacity">
+                      01
+                    </span>
+                    <div className="ml-3 flex-1">
+                      <h3 className="text-[16px] text-zinc-200 mb-1 group-hover/item:text-green-400 transition-colors">
+                        {exp.title}
+                      </h3>
+                      <p className="text-xs text-zinc-500 font-mono">
+                        {exp.description}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </Card>
+
+          <Square className="-top-4 -right-4  w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24" />
+          <Square className="-bottom-6 md:bottom-24 lg:bottom-2 -left-4  w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32" />
+        </div>
       </div>
     </section>
   );

@@ -9,11 +9,9 @@
 @theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 
   --breakpoint-sm: 640px;
-  --breakpoint-md: 768px;
+  --breakpoint-md: 868px;
   --breakpoint-lg: 1024px;
   --breakpoint-xl: 1100px;
   --breakpoint-2xl: 1180px;
@@ -34,6 +32,10 @@ body {
   .animate-fade-in {
     overflow: hidden;
     transition: max-height 0.3s ease;
+  }
+
+  .slashed-zero {
+    font-variant-numeric: slashed-zero;
   }
 
   @keyframes fadeIn {

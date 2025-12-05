@@ -7,9 +7,11 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <About />
-      <Skills />
-      <Faq />
+      <div className="space-y-62">
+        <About />
+        <Skills />
+        <Faq />
+      </div>
     </>
   );
 }
